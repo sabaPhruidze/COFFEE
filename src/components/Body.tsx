@@ -12,7 +12,7 @@ import { BtnOrder } from "./pieces/BtnOrder";
 import { StarSquare } from "./pieces/StarSquare";
 import { StartSquareImg } from "./pieces/StarSquareImg";
 import { ExplainProduct } from "./pieces/ExplainProduct";
-import { ExplainProductParagraph } from "./pieces/explainProductParagraph";
+import { ExplainProductParagraph } from "./pieces/ExplainProductParagraph";
 import { NatureImg } from "./pieces/NatureImg";
 import { CoffeImg } from "./pieces/CoffeImg";
 import { Text } from "./pieces/Text";
