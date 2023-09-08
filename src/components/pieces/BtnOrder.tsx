@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const BtnOrder = styled.div`
-  padding: 0.8rem 1rem 0.8rem 1rem;
+  padding: 15px;
+  border-radius: 5px;
   border: 1px solid green;
   background-color: #242424;
   transform-origin: left;
