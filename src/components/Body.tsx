@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 import { Container } from "./pieces/Container";
 import { Nav } from "./pieces/Nav";
 import { Ul } from "./pieces/Ul";
@@ -19,23 +21,50 @@ import STAR from "../assets/img/star.png";
 import NATURE from "../assets/img/nature.jpg";
 import COFFEE from "../assets/img/coffee.jpg";
 
+const navAnimation = {
+  hidden: {
+    opacity: 0,
+  },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.4,
+      ease: "easeInOut",
+    },
+  },
+};
+
+const navItem = {
+  hidden: {
+    opacity: 0,
+    y: "-20px",
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      ease: "easeInOut",
+    },
+  },
+};
+
 function Body() {
   return (
     <Container>
       <Nav>
-        <Ul>
-          <li>
+        <Ul variants={navAnimation} initial="hidden" animate="show">
+          <motion.li variants={navItem}>
             <Anchor href="#">Home</Anchor>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li variants={navItem}>
             <Anchor href="#">Product</Anchor>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li variants={navItem}>
             <Anchor href="#">About</Anchor>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li variants={navItem}>
             <Anchor href="#">Contact</Anchor>
-          </li>
+          </motion.li>
         </Ul>
       </Nav>
       <Section>

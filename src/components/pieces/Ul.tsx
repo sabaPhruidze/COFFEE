@@ -1,6 +1,6 @@
 import styled from "styled-components";
-
-export const Ul = styled.ul`
+import { motion } from "framer-motion";
+export const Ul = styled(motion.ul)`
   display: flex;
   justify-content: space-between;
   align-items: center;
