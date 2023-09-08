@@ -1,6 +1,6 @@
 import styled from "styled-components";
-
-export const CoffeImg = styled.img`
+import { motion } from "framer-motion";
+export const CoffeImg = styled(motion.img)`
   width: 280px;
   position: absolute;
   top: 180px;

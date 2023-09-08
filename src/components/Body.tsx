@@ -30,6 +30,7 @@ const navAnimation = {
     transition: {
       staggerChildren: 0.4,
       ease: "easeInOut",
+      delayChildren: 3,
     },
   },
 };
@@ -55,7 +56,7 @@ const typingContainer = {
     opacity: 1,
 
     transition: {
-      staggerChildren: 0.4,
+      staggerChildren: 0.3,
       ease: "easeInOut",
     },
   },
@@ -85,6 +86,8 @@ const explainProduct = {
     y: 0,
     transition: {
       ease: "easeInOut",
+      delay: 1,
+      duration: 0.8,
     },
   },
 };
@@ -98,6 +101,7 @@ const buttonProduct = {
     opacity: 1,
     scaleX: 1,
     transition: {
+      duration: 0.8,
       ease: "easeInOut",
     },
   },
@@ -112,6 +116,7 @@ const startAnimation = {
     transition: {
       staggerChildren: 0.4,
       ease: "easeInOut",
+      delayChildren: 3,
     },
   },
 };
@@ -126,7 +131,46 @@ const startItem = {
     x: 0,
     transition: {
       staggerChildren: 0.4,
+      duration: 1.2,
       ease: "easeInOut",
+    },
+  },
+};
+
+const imgProduct1 = {
+  hidden: {
+    opacity: 0,
+    y: "400px",
+    width: "80px",
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    width: "250px",
+    transition: {
+      ease: "easeInOut",
+      duration: 1,
+      delay: 2,
+    },
+  },
+};
+
+const imgProduct2 = {
+  hidden: {
+    opacity: 0,
+    y: "400px",
+    x: "50px",
+    width: "80px",
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    x: 0,
+    width: "250px",
+    transition: {
+      ease: "easeInOut",
+      duration: 1,
+      delay: 2.2,
     },
   },
 };
@@ -182,8 +226,20 @@ function Body() {
           </StarSquare>
         </Left>
         <Right>
-          <NatureImg src={NATURE} alt="nature" />
-          <CoffeImg src={COFFEE} alt="coffee" />
+          <NatureImg
+            src={NATURE}
+            alt="nature"
+            initial="hidden"
+            animate="show"
+            variants={imgProduct1}
+          />
+          <CoffeImg
+            src={COFFEE}
+            alt="coffee"
+            initial="hidden"
+            animate="show"
+            variants={imgProduct2}
+          />
         </Right>
       </Section>
     </Container>
