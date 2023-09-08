@@ -1,5 +1,11 @@
+import Header from "./components/pieces/Header";
+
 function App() {
-  return <>gr</>;
+  return (
+    <div>
+      <Header />
+    </div>
+  );
 }
 
 export default App;
