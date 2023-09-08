@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet";
-import ICON from "../../assets/icon.png";
-function Header() {
+import ICON from "../assets/img/icon.png";
+export default function Header() {
   const description =
     "This is a small project in order to test my skills what I learned during the framer motion course";
   return (
@@ -16,5 +16,3 @@ function Header() {
     </Helmet>
   );
 }
-
-export default Header;
