@@ -47,6 +47,30 @@ const navItem = {
     },
   },
 };
+const typingContainer = {
+  hidden: {
+    opacity: 0,
+  },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.4,
+      ease: "easeInOut",
+    },
+  },
+};
+
+const typingText = {
+  hidden: {
+    opacity: 0,
+  },
+  show: {
+    opacity: 1,
+    transition: {
+      ease: "easeInOut",
+    },
+  },
+};
 
 function Body() {
   return (
@@ -69,7 +93,13 @@ function Body() {
       </Nav>
       <Section>
         <Left>
-          <Text>Coffee Nature</Text>
+          <Text variants={typingContainer} initial="hidden" animate="show">
+            {Array.from(" Coffee Nature").map((word, i) => (
+              <motion.span key={i} variants={typingText}>
+                {word}
+              </motion.span>
+            ))}
+          </Text>
           <ExplainProduct>
             <ExplainProductParagraph>
               Coffee Nature is a brand product that provides the best quality of
