@@ -1,6 +1,6 @@
 import styled from "styled-components";
-
-export const BtnOrder = styled.div`
+import { motion } from "framer-motion";
+export const BtnOrder = styled(motion.button)`
   padding: 15px;
   border-radius: 5px;
   border: 1px solid green;

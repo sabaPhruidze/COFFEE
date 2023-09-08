@@ -53,6 +53,7 @@ const typingContainer = {
   },
   show: {
     opacity: 1,
+
     transition: {
       staggerChildren: 0.4,
       ease: "easeInOut",
@@ -63,10 +64,68 @@ const typingContainer = {
 const typingText = {
   hidden: {
     opacity: 0,
+    y: "-20px",
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      ease: "easeInOut",
+    },
+  },
+};
+
+const explainProduct = {
+  hidden: {
+    opacity: 0,
+    y: "-20px",
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      ease: "easeInOut",
+    },
+  },
+};
+
+const buttonProduct = {
+  hidden: {
+    opacity: 0,
+    scaleX: 0,
+  },
+  show: {
+    opacity: 1,
+    scaleX: 1,
+    transition: {
+      ease: "easeInOut",
+    },
+  },
+};
+
+const startAnimation = {
+  hidden: {
+    opacity: 0,
   },
   show: {
     opacity: 1,
     transition: {
+      staggerChildren: 0.4,
+      ease: "easeInOut",
+    },
+  },
+};
+
+const startItem = {
+  hidden: {
+    opacity: 0,
+    x: "-100px",
+  },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      staggerChildren: 0.4,
       ease: "easeInOut",
     },
   },
@@ -101,19 +160,25 @@ function Body() {
             ))}
           </Text>
           <ExplainProduct>
-            <ExplainProductParagraph>
+            <ExplainProductParagraph
+              variants={explainProduct}
+              initial="hidden"
+              animate="show"
+            >
               Coffee Nature is a brand product that provides the best quality of
               coffee in the world. We dedicate the best quality of coffee in the
               world. For Coffee lover we will serve you
             </ExplainProductParagraph>
           </ExplainProduct>
           <Button>
-            <BtnOrder>Order now</BtnOrder>
+            <BtnOrder variants={buttonProduct} initial="hidden" animate="show">
+              Order now
+            </BtnOrder>
           </Button>
-          <StarSquare>
-            <StartSquareImg src={STAR} alt="star" />
-            <StartSquareImg src={STAR} alt="star" />
-            <StartSquareImg src={STAR} alt="star" />
+          <StarSquare variants={startAnimation} initial="hidden" animate="show">
+            <StartSquareImg src={STAR} alt="star" variants={startItem} />
+            <StartSquareImg src={STAR} alt="star" variants={startItem} />
+            <StartSquareImg src={STAR} alt="star" variants={startItem} />
           </StarSquare>
         </Left>
         <Right>

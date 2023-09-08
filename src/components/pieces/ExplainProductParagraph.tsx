@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
-export const ExplainProductParagraph = styled.p`
+import { motion } from "framer-motion";
+export const ExplainProductParagraph = styled(motion.p)`
   text-align: justify;
 `;

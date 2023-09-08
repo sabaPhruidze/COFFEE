@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
-export const StartSquareImg = styled.img`
+import { motion } from "framer-motion";
+export const StartSquareImg = styled(motion.img)`
   width: 100px;
 `;

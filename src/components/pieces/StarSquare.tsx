@@ -1,6 +1,6 @@
 import styled from "styled-components";
-
-export const StarSquare = styled.div`
+import { motion } from "framer-motion";
+export const StarSquare = styled(motion.div)`
   position: absolute;
   bottom: 40px;
 `;
